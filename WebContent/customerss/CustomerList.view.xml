@@ -1,0 +1,61 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:f="sap.ui.layout.form"
+		controllerName="customerss.CustomerList" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="Title">
+		<content>
+	        <Button text="Get Customer List" press="onPress"/>
+	        
+	        <HBox width="100%" visible="false" id="idList">
+	         <items>
+	            <List items="{m2>/Customers}">
+	          <items>
+	             <CustomListItem type="Active" press="onItemPress">
+	                 <content>
+	                   <VBox>
+	                     <items>
+	                   	  <Title text="{m2>CustomerID}"/>
+	                     <Text text="{m2>CompanyName}"/>
+	                     </items>
+	                   </VBox>
+	                   
+	                 </content>
+	             </CustomListItem>
+	          </items>
+	        </List>
+	        
+	        <VBox class="sapUiSmallMargin">
+		<f:SimpleForm id="SimpleFormDisplay354"
+			editable="false"
+			layout="ResponsiveGridLayout"
+			title="Address"
+			labelSpanXL="3"
+			labelSpanL="3"
+			labelSpanM="3"
+			labelSpanS="12"
+			adjustLabelSpan="false"
+			emptySpanXL="4"
+			emptySpanL="4"
+			emptySpanM="4"
+			emptySpanS="0"
+			columnsXL="1"
+			columnsL="1"
+			columnsM="1"
+			singleContainerFullSize="false" >
+			<f:content>
+				<Label text="ID" />
+				<Text  text="{m2>CustomerID}" />
+				<Label text="Company Name" />
+				<Text text="{m2>CompanyName}" />
+				
+			</f:content>
+		</f:SimpleForm>
+	</VBox>
+	
+	         </items>
+	        </HBox>
+	       
+	        
+	      	
+	        
+		</content>
+	</Page>
+</core:View>
